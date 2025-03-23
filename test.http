@@ -1,0 +1,30 @@
+### Write to the Leader
+POST http://localhost:5000/put
+Content-Type: application/json
+Accept: application/json
+
+{
+    "key": "foo",
+    "value": "bar"
+}
+
+### Read from the Leader
+GET http://localhost:5000/get/foo
+Accept: application/json
+
+### Read from a Follower1
+GET http://localhost:5001/follower/get/foo
+Accept: application/json
+
+### Read from a Follower2
+GET http://localhost:5002/follower/get/foo
+Accept: application/json
+
+### Delete from the Leader
+POST http://localhost:5000/delete
+Content-Type: application/json
+Accept: application/json
+
+{
+    "key": "foo"
+}
