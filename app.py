@@ -51,7 +51,9 @@ class FollowerNode(KeyValueStore):
         """
         self.put(key, value)
         self.last_replicated_key = key
-        print(f"Follower: Replicated PUT key={key}, value={value}")
+        file1 = open("replication.log", "a")
+        file1.write(f"Follower: Replicated PUT key={key}, value={value}")
+        file1.close()
 
     def replicate_delete(self, key):
         """
@@ -59,7 +61,9 @@ class FollowerNode(KeyValueStore):
         """
         self.delete(key)
         self.last_replicated_key = key
-        print(f"Follower: Replicated DELETE key={key}")
+        file1 = open("replication.log", "a")
+        file1.write(f"Follower: Replicated DELETE key={key}")
+        file1.close()
 
 # Configuration
 LEADER_PORT = 5000
