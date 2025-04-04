@@ -4,5 +4,5 @@ import { withSidebar } from 'vitepress-sidebar'
 export default withSidebar({
   title: "Database Replication",
   description: "CS114",
-  base: "/database-replication-workshop/"
+  base: "/replication-basic/"
 }, { documentRootPath: '/materi' })
