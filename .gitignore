@@ -1,0 +1,4 @@
+node_modules
+materi/.vitepress/cache
+src/*.log*
+src/*-audit*

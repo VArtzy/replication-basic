@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev materi",
+    "docs:build": "vitepress build materi",
+    "docs:preview": "vitepress preview materi"
+  },
+  "dependencies": {
+    "vitepress-sidebar": "^1.31.1"
+  }
+}
